@@ -1,0 +1,13 @@
+<div class='container'>
+  <h1>Setting a Bookmark</h1>
+  <ul>
+    <li>
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+        <%= f.association :movie %>
+        <%= f.input :comment %>
+        <%= f.submit %>
+      <% end %>
+    </li>
+  </ul>
+  <%= link_to '<button type="button">Back home</button>'.html_safe , lists_path%>
+</div>

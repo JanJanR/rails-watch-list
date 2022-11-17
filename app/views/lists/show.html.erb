@@ -1,0 +1,9 @@
+<div class='container'>
+<% @list.bookmarks.each do |b| %>
+  <%= b.movie.title %> --
+  <%= b.comment %><br>
+<% end %>
+<hr>
+<%= link_to '<button type="button">Add a bookmark</button>'.html_safe, new_list_bookmark_path(@list) %><br>
+<%= link_to '<button type="button">Back home</button>'.html_safe , lists_path%>
+</div>
